@@ -6,7 +6,7 @@ from faker import Faker
 
 FAKE = Faker("ru_RU")
 
-skills = [
+SKILLS = [
     "Стремительный прыжок",
     "Электрический выстрел",
     "Ледяной удар",
@@ -17,7 +17,7 @@ skills = [
     "Огненный заряд"
 ]
 
-letters_mapping = {
+LETTERS_MAPPING = {
     'а': 'а͠',
     'б': 'б̋',
     'в': 'в͒͠',
@@ -90,10 +90,10 @@ letters_mapping = {
 
 def runic_alphabet_skills():
     runic_skills = []
-    for skill in skills:
+    for skill in SKILLS:
         runic_skill = skill
-        for letter in letters_mapping:
-            runic_skill = runic_skill.replace(letter, letters_mapping[letter])
+        for letter in LETTERS_MAPPING:
+            runic_skill = runic_skill.replace(letter, LETTERS_MAPPING[letter])
         runic_skills.append(runic_skill)
     return runic_skills
 
